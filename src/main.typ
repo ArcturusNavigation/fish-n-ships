@@ -30,8 +30,4 @@
   // printer-test: true, // Suitably placed CMYK printer tests
 )
 
-= Section Heading
-== Subsection Heading
-=== Subsubsection Heading
-==== Paragraph Heading
-===== Subparagraph Heading
+= Software Deployment Model
