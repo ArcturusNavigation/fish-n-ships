@@ -118,6 +118,11 @@ incorporate it into our environment setup.
 
 == Potential Benefits
 
+#block([
+  #image("assets/img/deps.png")
+  *The "dependency hell" induced by the installation of a core ROS tool, `ros2run`--managing this web is a job for the Nix package manager*
+], breakable: false, spacing: 12pt)
+
 While @wolsieffer_lopsided98 does not provide a binary cache for the Humble
 distribution, it is not difficult to set up a Hydra build server that can
 distribute these binaries for the packages we need. We are currently working on
@@ -204,8 +209,8 @@ installed or configuration settings applied in any one container.
 #block(
   [
     #image("assets/img/arcturus-nix.png")
-    Automatically generated (read "we passed this into ChatGPT and this is what it
-    came up with") theoretical diagram of current Nix build infrastructure
+    *Automatically generated (read "we passed this into ChatGPT and this is what it
+    came up with") theoretical diagram of current Nix build infrastructure*
   ], breakable: false, spacing: 12pt,
 )
 
@@ -312,7 +317,7 @@ responsible for setting up the development environment for `all_seaing_vehicle`:
           ]; } )
       ]; };
   ```
-A simple `devshell` setup for managing Arcturus ROS codebases
+*A simple `devshell` setup for managing Arcturus ROS codebases*
 ], breakable: false, spacing: 12pt)
 
 Combining this with a series of setup functions, we can create the same

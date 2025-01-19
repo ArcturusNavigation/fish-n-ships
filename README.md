@@ -28,12 +28,23 @@ However, the way you *should* build it is to:
 
 1. [Install Nix](https://github.com/DeterminateSystems/nix-installer) (no, you don't need to install NixOS, but you do need the Nix package manager)
 2. Clone this repository and open [`src/`](src/) in a terminal
-3. Run `nix run #.watch` and edit [`src/main.typ`](src/main.typ)
+3. Run `nix develop; nix run .#watch` and edit [`src/main.typ`](src/main.typ)
 4. Your changes should be reflected in real time at [`src/main.pdf`](src/main.pdf)
 
-Alternatively, you can replace step 3 with `nix develop; nix run #.build` for a one-time build of the current Typst source.
+Alternatively, you can replace step 3 with `nix develop; nix run .#build` for a one-time build of the current Typst source.
 If you're wondering how to write a Typst file, take a look at the [Typst documentation](https://typst.app/docs/).
 If you encounter build errors or need some obscure packages, fonts, etc. to be loaded into the development environment, take a look at the [Typix documentation](https://loqusion.github.io/typix/recipes/adding-dependencies.html).
 
 Feel free to [open an issue](https://github.com/arcturusnavigation/fish-n-ships/issues/new) if something is still amiss.
 Pull requests and questions about content are always welcome!
+
+---
+
+## Dependency Hell
+
+In case you're curious, this is what it looks like (for `ros2run` on Nix):
+
+![An interconnected web of dependencies for ros2run](src/assets/img/deps.png)
+Generated with [nix-visualize](https://github.com/craigmbooth/nix-visualize).
+
+See [here](src/assets/img/deps.png) for source. Also included in the [report](src/main.pdf).
