@@ -35,7 +35,8 @@
   // printer-test: true, // Suitably placed CMYK printer tests
 )
 
-#set page(margin: (top: 2in, bottom: 2in, left: 1.5in, right: 1.5in))
+#set page(margin: (top: 1.5in, bottom: 1.5in, left: 1.25in, right: 1.25in))
+#set text(size: 11pt)
 
 = Software Deployment Model
 
